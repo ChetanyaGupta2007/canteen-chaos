@@ -38,6 +38,19 @@ becoz that class was defind in the media of tablet specifically.
 
 
 
+CC-05 — "The category bar scrolls away on my phone"
+Reproduced: went to dev tools changed the screen size saw a bit of filter coming scroll concluded it to be becoz of padding and gaps
+
+Cause: the section was not divided into parts and scroll was considering them as a whole block.
+
+Fix: used flex box made vertical columns , made filter with fixed postion then the issue occure that sides of filter was not getting covered so i used width = 100% adn used overflow in horizontal direction to sort any issue with clipping
+
+Checked: the screen scroll down and filter coming down as well
+
+Time: 1 hr and 8 mins
+
+
+
 
 ## Could not fix
 

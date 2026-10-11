@@ -170,9 +170,11 @@ h1, h2, h3 { margin: 0; }
   background: var(--orange-soft);
   border-bottom: 1px solid var(--line);
   padding: 14px 0 0;
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: auto;
   z-index: 40;
+  overflow-x: auto;
+  width: 100%;
 }
 
 .filters-inner { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
@@ -229,7 +231,10 @@ h1, h2, h3 { margin: 0; }
 .cat-count { font-size: 11px; opacity: 0.7; }
 
 /* ------------------------------------------------------ menu grid */
-
+.view {
+  display: flex;
+  flex-direction: column;
+}
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
