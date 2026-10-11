@@ -6,44 +6,36 @@ This file is read as carefully as your code. A correct fix you cannot
 explain counts for little; a bug you could not fix but investigated
 honestly still counts for something.
 
-Delete the example before you submit.
 
 
 
-## Example — delete this
 
-### CC-99 — "The cart total is wrong"
 
-**Reproduced:** Added 2 dosas at Rs. 60 each. The cart showed
-Rs. 119.99999 instead of Rs. 130. Happened every time, on any dish with
-a price ending in .50.
+## CC-02 — "Can't read anything in dark mode"
 
-**Cause:** The total was being added up with plain floating point and
-never rounded, so 0.1 + 0.2 style errors showed up on screen. The
-rounding helper existed but this one place was not using it.
+**Reproduced:** opened the site in dark mode , the price and name of food item was present but almost invisible.
 
-**Fix:** Ran the total through the existing rounding helper instead of
-adding a new one, so every price on screen goes through the same path.
+**Cause:** there was a color code named --line in the parent block.
 
-**Checked:** Cart, checkout and the order screen all show Rs. 130 now.
-Prices without decimals still show without a trailing .00.
+**Fix:** wrote a ui matching color orange in css of dish name and price which overrule the parent block command
 
-**Time:** about 40 minutes, most of it working out that the cart and the
-order screen round in different places.
+**Checked:** dish price and name is now properly visible with matching ui
+
+**Time:** took about 15 mins to find the color and css command
 
 
 
-## CC-0X — "<the complaint, in short>"
+## CC-04 — "The buttons don't work on my tablet"
+**Reproduced**: switch to ipad mini using dev tools on gogogle rowser tried to click on button and was not working
 
-**Reproduced:**
+**Cause**: there was a transparent block over the buttons in img-wrap in tablet media which changed its color to black and removed transparency then it was visible. it happened in tablet only 
+becoz that class was defind in the media of tablet specifically.
 
-**Cause:**
+**Fix**:i searched that class name in all files no where used except for that block so removed that whole patch name .img-wrap::after
 
-**Fix:**
+**Checked**: then loaded the site and it was working,
+**Time**: 38 min ,first i checked the button was being clicked or not then moved to css debugging.
 
-**Checked:**
-
-**Time:**
 
 
 

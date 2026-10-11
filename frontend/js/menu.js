@@ -234,9 +234,10 @@ delegate(menuGrid, '[data-action]', 'click', (e, node) => {
     case 'inc': {
       const result = addToCart(dish, 1);
       if (!result.ok) return toast(result.reason, 'warn');
-      if (node.dataset.action === 'add') toast(`${dish.name} added`, 'ok', { ms: 1500 });
+      if (node.dataset.action === 'add') {toast(`${dish.name} added`, 'ok', { ms: 1500 });
       updateCardQty(dish.id);
-      break;
+      console.log('add button clicked')
+      break;}
     }
 
     case 'dec':
