@@ -49,7 +49,12 @@ Checked: the screen scroll down and filter coming down as well
 
 Time: 1 hr and 8 mins
 
+CC-XX1 — "two local host same files but + button after add to cart button in menu page not working in one file"
+What I tried: whn bug was found about + not working i tried to edit css file to which new code did it but cant find it so copy paste the css file edited one into new cloned repo ran in diffenrt port .
 
+Where I got to: bug was not solved
+
+What I would try next: happened first time with me and no ai is allowed so dont know what to do.
 
 
 ## Could not fix

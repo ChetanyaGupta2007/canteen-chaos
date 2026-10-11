@@ -19,7 +19,7 @@ const couponRoutes = require('./routes/coupons.routes');
 const staffRoutes = require('./routes/staff.routes');
 
 const app = express();
-const PORT = Number(process.env.PORT || 3000);
+const PORT = Number(process.env.PORT || 7870);
 const LATENCY_MS = Number(process.env.LATENCY_MS === undefined ? 250 : process.env.LATENCY_MS);
 const AUTO_COOK = process.env.AUTO_COOK !== 'false';
 const KITCHEN_TICK_MS = Number(process.env.KITCHEN_TICK_MS || 10000);

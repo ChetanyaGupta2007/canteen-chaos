@@ -236,7 +236,7 @@ delegate(menuGrid, '[data-action]', 'click', (e, node) => {
       if (!result.ok) return toast(result.reason, 'warn');
       if (node.dataset.action === 'add') {toast(`${dish.name} added`, 'ok', { ms: 1500 });
       updateCardQty(dish.id);
-      console.log('add button clicked')
+      
       break;}
     }
 
