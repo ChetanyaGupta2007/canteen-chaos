@@ -57,6 +57,17 @@ Where I got to: bug was not solved
 What I would try next: happened first time with me and no ai is allowed so dont know what to do.
 
 
+CC-0X — "quantity in main screen of menu is slightly visible"
+Reproduced: clicked add to cart , quantity number was almost invisible
+
+Cause: color was used from parent which is --line color
+
+Fix: change the color to white or --ink
+
+Checked: rant he server and saw the quantity
+
+Time:5 min (also to write to log)
+
 ## Could not fix
 
 For anything you investigated but did not solve. Say what you tried and
