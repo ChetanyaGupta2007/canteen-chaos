@@ -49,6 +49,17 @@ Checked: the screen scroll down and filter coming down as well
 
 Time: 1 hr and 8 mins
 
+CC-10: "Sorting by price is backwards"
+Reproduced: Press filter changed to low to high and vice versa it was opposedly working
+
+Cause: The logic for asc and dec was opposite the wrote
+
+Fix: correct the logic
+
+Checked:Checked the feature it is working now
+
+Time: 43min majority of the time was tkaen to find the code coz i was search acc to id and function name and api stuff , then saw it in logic folder which token few seconds to change.
+
 CC-XX1 — "two local host same files but + button after add to cart button in menu page not working in one file"
 What I tried: whn bug was found about + not working i tried to edit css file to which new code did it but cant find it so copy paste the css file edited one into new cloned repo ran in diffenrt port .
 
