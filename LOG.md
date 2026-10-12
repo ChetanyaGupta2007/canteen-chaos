@@ -114,6 +114,13 @@ Checked: rant he server and saw the quantity
 
 Time:5 min (also to write to log)
 
+CC-0X — "my order page not working"
+What I tried: i tried to trace from frontend to backend.
+
+Where I got to: got stuck on backend api file having /api/orders/:token 
+
+What I would try next: i think that the order placed doesnt have or not gets an updated attribute which allow its if condition to work and show placed orders loaded orders
+
 ## Could not fix
 
 For anything you investigated but did not solve. Say what you tried and
