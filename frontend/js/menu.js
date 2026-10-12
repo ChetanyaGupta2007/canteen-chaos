@@ -369,21 +369,21 @@ loadMoreBtn.addEventListener('click', () => {
 /* --------------------------------------------------- infinite scroll */
 
 // The button still works; this just saves the person a click.
-if ('IntersectionObserver' in window && sentinel) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const visible = entries.some((entry) => entry.isIntersecting);
-      if (!visible) return;
-      if (state.route !== 'menu' || !state.hasMore || loadMoreBtn.disabled) return;
+// if ('IntersectionObserver' in window && sentinel) {
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       const visible = entries.some((entry) => entry.isIntersecting);
+//       if (!visible) return;
+//       if (state.route !== 'menu' || !state.hasMore || loadMoreBtn.disabled) return;
 
-      state.page += 1;
-      loadMenu({ append: true });
-    },
-    { rootMargin: '300px' }
-  );
+//       state.page += 1;
+//       loadMenu({ append: true });
+//     },
+//     { rootMargin: '300px' }
+//   );
 
-  observer.observe(sentinel);
-}
+//   observer.observe(sentinel);
+// }
 
 // the cart can change from the cart panel, so keep the grid in step
 on('cart', ({ dishId, cleared }) => {

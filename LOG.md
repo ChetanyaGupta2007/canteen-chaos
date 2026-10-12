@@ -60,6 +60,19 @@ Checked:Checked the feature it is working now
 
 Time: 43min majority of the time was tkaen to find the code coz i was search acc to id and function name and api stuff , then saw it in logic folder which token few seconds to change.
 
+CC-09 — "The menu shows more dishes than it should"
+Reproduced: scroll down again and again
+
+Cause: there was infinite scroll written
+
+Fix: commented it out
+
+Checked: checked the site , it was loading more when the button is clicked 
+Time: 50 min, took time to first find api,server then searched frontend then didnt expect the whole code to found so was founding in between as well, so took time
+
+
+
+
 CC-XX1 — "two local host same files but + button after add to cart button in menu page not working in one file"
 What I tried: whn bug was found about + not working i tried to edit css file to which new code did it but cant find it so copy paste the css file edited one into new cloned repo ran in diffenrt port .
 
