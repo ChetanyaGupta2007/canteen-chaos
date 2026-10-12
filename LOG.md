@@ -82,6 +82,19 @@ Checked: order was not placed when i did with grilled sandwich having less stock
 Time: approx 2hrs, first looked into frontend code found the bug , didnt work then searched for other backend and while finding it i did it in smoke and then validation file
 
 
+CC-07: "Cancelling makes it worse"
+Reproduced: i treid cancelling first i thought it would be deducting but i was getting deducted twice the number we ordered
+
+Cause: in the logic return statement - was used
+
+Fix: changed - to + so that the order logic which had removed the stock by order api will add the number deducted.
+
+Checked: tried canceled order and went to see in counter it worked.
+
+Time:15min , majority of the time was to trace the function where logic was used.
+
+
+
 CC-XX1 — "two local host same files but + button after add to cart button in menu page not working in one file"
 What I tried: whn bug was found about + not working i tried to edit css file to which new code did it but cant find it so copy paste the css file edited one into new cloned repo ran in diffenrt port .
 
