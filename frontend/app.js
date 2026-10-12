@@ -142,6 +142,11 @@ menuGrid.addEventListener('click', (e) => {
   const current = state.cart[id] || 0;
 
   if (action === 'inc' || action === 'add') {
+    if ( current >= dish.stock) {
+      showStatus('Cannot add more items. Stock limit reached.');
+      console.log(`Cannot add more of dish ${dish.name} (id: ${dish.id}). Stock limit reached.`);
+      return;
+    }
     if (current >= 10) return;
     state.cart[id] = current + 1;
   }

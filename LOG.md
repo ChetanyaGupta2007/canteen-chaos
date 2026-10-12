@@ -70,7 +70,16 @@ Fix: commented it out
 Checked: checked the site , it was loading more when the button is clicked 
 Time: 50 min, took time to first find api,server then searched frontend then didnt expect the whole code to found so was founding in between as well, so took time
 
+CC-06 — "I ordered more than they had"
+Reproduced: ordered veg momos more that they had ,  inventory went into negative
 
+Cause: in validation , there was no check related to over the stock problem
+
+Fix: did 3 changes first to see in ui, second there was main logic in validation , and an internal server check present in smoke.js
+
+Checked: order was not placed when i did with grilled sandwich having less stock than order
+
+Time: approx 2hrs, first looked into frontend code found the bug , didnt work then searched for other backend and while finding it i did it in smoke and then validation file
 
 
 CC-XX1 — "two local host same files but + button after add to cart button in menu page not working in one file"

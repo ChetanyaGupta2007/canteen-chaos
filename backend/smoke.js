@@ -200,7 +200,7 @@ const near = (a, b, tolerance = 0.02) => Math.abs(a - b) < tolerance;
     check('string qty rejected', (await bad({ items: [{ dishId: orderable.id, qty: '2' }] })).status === 400);
     check('junk dishId rejected', (await bad({ items: [{ dishId: 'abc', qty: 1 }] })).status === 400);
     check('empty order rejected', (await bad({ items: [] })).status === 400);
-    check('qty over stock rejected', (await bad({ items: [{ dishId: orderable.id, qty: 99 }] })).status === 400);
+    check('qty over stock rejected', (await bad({ items: [{ dishId: orderable.id, qty: orderable.stock + 1 }] })).status === 400);
     check('duplicate dish rejected', (await bad({ items: [{ dishId: orderable.id, qty: 1 }, { dishId: orderable.id, qty: 1 }] })).status === 400);
     check('bad room rejected', (await bad({ items: [{ dishId: orderable.id, qty: 1 }], hostelRoom: 'ZZ9' })).status === 400);
     check('long note rejected', (await bad({ items: [{ dishId: orderable.id, qty: 1 }], note: 'x'.repeat(200) })).status === 400);
