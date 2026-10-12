@@ -121,6 +121,13 @@ Where I got to: got stuck on backend api file having /api/orders/:token
 
 What I would try next: i think that the order placed doesnt have or not gets an updated attribute which allow its if condition to work and show placed orders loaded orders
 
+Bug Solved 
+Cause : there was no userid in store json and memberid was compared with it
+fix : did changes in comparison of memberid with memberid .
+time (: 1hr looking somewhere else at the dedicated place for mmy orders :)
+
+
+
 ## Could not fix
 
 For anything you investigated but did not solve. Say what you tried and
