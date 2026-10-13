@@ -127,6 +127,18 @@ fix : did changes in comparison of memberid with memberid .
 time (: 1hr looking somewhere else at the dedicated place for mmy orders :)
 
 
+CC-0X — Picked Feature was not coming"
+Reproduced: i saw that all rating were zero in bars so i thought it would be an issue from backend side but found that first the ui was not showing the button for rate , then thought that the button was hidden that might an issue but logic for button hidden was correct , so then thought that there is a possibiblty that picked is not coming in status which is disabling whole process of rating.
+
+Cause: the status flow of change had an error in logic which should give an empty array when order is picked but was giving whe it was ready only not moving to picked
+
+Fix: correct the array having hat flow logic
+
+Checked: whole rating picked up feature is nw working
+
+Time:3 hrs and 37 min , took time in lot searching for correct cause.
+
+
 
 ## Could not fix
 
