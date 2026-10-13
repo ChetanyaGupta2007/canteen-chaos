@@ -91,7 +91,8 @@ function validateOrder(order, menu, { now = new Date(), orders = [] } = {}) {
     if (!slotCheck.ok) errors.push(slotCheck.reason);
   }
 
-  if (order.tipPercent !== undefined && order.tipPercent !== null && order.tipFlat) {
+  if (order.tipPercent !== undefined && order.tipPercent !== null && order.tipPercent !== 0 &&
+  order.tipFlat !== 0) {
     errors.push('Send either a tip percentage or a flat tip, not both');
   }
 

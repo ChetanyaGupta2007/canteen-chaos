@@ -138,6 +138,17 @@ Checked: whole rating picked up feature is nw working
 
 Time:3 hrs and 37 min , took time in lot searching for correct cause.
 
+CC-0X — "when we give tip as input not working"
+Reproduced: when manual tip is gven it shows either give perecnetage or flatip or both
+
+Cause the conditoinal statemne tform server side was wrong , it was shwowing true for value 0
+
+Fix: added aonidtion for for cehcking zero making false
+
+Checked: tested with tip 12 in a dish and it went succesfully
+
+Time: 38 min, took little time to trace the bug from frontend to server.
+
 
 
 ## Could not fix
